@@ -65,14 +65,18 @@
   </li>
 </ul>
 <ul>
-  <ng-container *ngFor="let elt of moyennes" [ngClass]="{'rouge': elt<10, 'bleu': elt>=10 && elt<15, 'vert': elt>=15}">
-    <li *ngIf="elt<10; else bien">
+  <ng-container *ngFor="let elt of moyennes">
+    <li *ngIf="elt<10; else bien" class="rouge">
       {{ elt }} : échec
     </li>
     <ng-template #bien>
-      <li *ngIf="elt<15; else excellent"> {{ elt }} : bien</li>
+      <li *ngIf="elt<15; else excellent" class="bleu">
+        {{ elt }} : bien
+      </li>
       <ng-template #excellent>
-        <li> {{ elt }} : excellent</li>
+        <li class="vert">
+          {{ elt }} : excellent
+        </li>
       </ng-template>
     </ng-template>
   </ng-container>
