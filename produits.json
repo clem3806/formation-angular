@@ -1,0 +1,30 @@
+{
+  "produits": [
+    {
+      "id": 1,
+      "designation": "écran",
+      "prixUnitaire": 100,
+      "quantiteEnStock": 10,
+      "chemin": ""
+    },
+    {
+      "id": 2,
+      "designation": "souris",
+      "prixUnitaire": 10,
+      "quantiteEnStock": 25,
+      "chemin": ""
+    },
+    {
+      "designation": "clavier",
+      "prixUnitaire": 15,
+      "quantiteEnStock": 250,
+      "id": 3
+    },
+    {
+      "designation": "vidéo-projecteur",
+      "prixUnitaire": 500,
+      "quantiteEnStock": 3,
+      "id": 4
+    }
+  ]
+}
