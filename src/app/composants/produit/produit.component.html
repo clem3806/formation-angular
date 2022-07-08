@@ -28,7 +28,7 @@
             La quantité est obligatoire
         </div>
     </div>
-    <button [disabled]="monForm.invalid" class="btn btn-primary">Afficher</button>
+    <button [disabled]="monForm.invalid" class="btn btn-primary">Ajouter</button>
 </form>
 
 <div class="container my-3">
@@ -53,6 +53,7 @@
                     <button class="btn" (click)="supprimerProduit(elt.id)">
                         <i style="color:tomato" class="fas fa-trash-alt"></i>
                     </button>
+                    <a [routerLink]="['/produit', elt.id]"><i class="far fa-edit"></i></a>
                 </td>
             </tr>
 

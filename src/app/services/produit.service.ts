@@ -12,7 +12,16 @@ export class ProduitService {
   getAllProducts() {
     return this.http.get<Produit[]>(this.url);
   }
+  getOneProduct(id: number) {
+    return this.http.get<Produit>(this.url + "/" + id);
+  }
   addProduct(p: Produit) {
     return this.http.post<Produit>(this.url, p);
+  }
+  deleteProduct(id: number){
+    return this.http.delete(this.url + "/" + id);
+  }
+  updateProduct(p: Produit) {
+    return this.http.put<Produit>(this.url + "/" + p.id, p);
   }
 }

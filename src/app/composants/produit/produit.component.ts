@@ -22,7 +22,9 @@ export class ProduitComponent implements OnInit {
     this.produit = {};
   }
   supprimerProduit(id = 0) {
-
+    return this.ps.deleteProduct(id).subscribe(res =>{
+     this.initProduit();
+    });
   }
   initProduit() {
     this.ps.getAllProducts().subscribe(res => {
